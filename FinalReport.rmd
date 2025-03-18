@@ -65,8 +65,10 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
-Since our p values for our data are all significantly low figures, we can reject our null hypothesis. We can come to a conclusion that the drug is ineffective.
+Since our p values for our data (.0000002761 ,0,.0000002333) are all significantly low figures, we can reject our null hypothesis. We can come to a conclusion that the drug is ineffective.
 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+While working on this categorical data, we compared two different categories (if you got aids vs if you took the drug or the placebo). From this, we were able to see from the data and from our numerical and graphical results that the drug was not really effective in stopping the people from getting aids. If anything, the drug increased the chance of getting aids. We examined our pvalues (.0000002761 ,0, .0000002333) which supported our decision in rejecting the null hypothesis since they are all very low significant values.
