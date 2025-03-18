@@ -38,15 +38,34 @@ Females <- filter(triUmp, gender == "F")
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
+```{r}
+barchartGC(~infected+treatment, data=Females)
+barchartGC(~infected+treatment, data=Females, type="percent")
+```
+
+The drug made to prevent aids does not appear to be working. More than half of the people who took the drug ended up getting aids, so it does not seem to be doing its job. In fact, it is doing quite the opposite.
 
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+table1 <- xtabs(~infected+treatment, data=triUmp)
+rowPerc(table1)
+colPerc(table1)
+```
+%9.3% of the people who got aids ended up taking the drug, whereas 40.7% took the placebo.
+
 ## Inferential Results
 
 <!--State hypothesis clearly.  Make sure your discussion of the inferential test covers all the aspects that the test output produces, such as test statistic, p-value etc.  Make a decision about the null hypothesis, explain the assumptions on which the selected test/procedure was based, and why the chosen procedure satisfys the assumptions and is appropriate to answer the research question!-->
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+Since our p values for our data are all significantly low figures, we can reject our null hypothesis. We can come to a conclusion that the drug is ineffective.
 
 # Discussion and Conclusion
 
