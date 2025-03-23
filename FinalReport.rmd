@@ -54,7 +54,7 @@ table1 <- xtabs(~infected+treatment, data=triUmp)
 rowPerc(table1)
 colPerc(table1)
 ```
-%9.3% of the people who got aids ended up taking the drug, whereas 40.7% took the placebo.
+Among those who contracted AIDS, 40.87% had taken the drug, while 59.13% had taken the placebo, suggesting a higher infection rate in the placebo group. Additionally, the second table shows the overall proportion of individuals in each group, with 3.99% of drug recipients and 5.49% of placebo recipients developing AIDS, indicating that the drug may have had a protective effect.
 
 ## Inferential Results
 
